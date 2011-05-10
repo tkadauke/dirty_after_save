@@ -1,0 +1,20 @@
+dirty_after_save
+================
+
+This simple gem adds support to all ActiveRecord models in your application to track
+the changes made to a record before it was saved. Standard Rails forgets this
+information as soon as save is called.
+
+To access all changed attributes after save has been called, use
+
+  Model#changed_attributes_before_save
+
+To access changes in individual fields, append the suffix '_change_before_save', i.e.
+
+  Model#field_change_before_save
+
+To figure out if a field was changed, append the suffix '_changed_before_save?', i.e.
+
+  Model#field_changed_before_save?
+
+That's it. Enjoy.
